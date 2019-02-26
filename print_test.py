@@ -149,10 +149,9 @@ if __name__ == "__main__":
 	mm = MiaoMiao()
 	if mm.connected:
 		mm.sendDensity(100)
-		mm.TestPage()
-		from image_process import ImageConverter
+		from image_process import TextConverter
 
-		img = ImageConverter.image2bmp("/tmp/temp.bmp")
+		img = TextConverter.text2bmp("114514")
 		mm.sendImage(img)
 		pass
 

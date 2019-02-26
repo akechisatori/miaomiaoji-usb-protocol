@@ -48,10 +48,7 @@ class TextConverter:
         blank_image = np.zeros((height, 384), np.uint8)
         blank_image.fill(255)
         img = cv2.putText(blank_image, text, pos, font, size, color, thick)
-        bmp = ImageConverter.im2bmp(img)
-        cv2.imwrite("/tmp/temp.bmp", img)
-
-        res = ImageConverter.image2bmp("/tmp/temp.bmp")
+        return ImageConverter.im2bmp(img)
 
         return res
 
